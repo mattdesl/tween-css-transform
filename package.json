@@ -1,0 +1,47 @@
+{
+  "name": "tween-css-transform",
+  "version": "1.0.0",
+  "description": "tweens a CSS transform (matrix3d)",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tween-chain": "^1.0.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "tween",
+    "tweenr",
+    "tween-ticker",
+    "css",
+    "transform",
+    "transfoms",
+    "matrix",
+    "matrix3d",
+    "mat3d",
+    "mat4x4",
+    "4x4",
+    "matrices",
+    "decomposition",
+    "quaternion",
+    "slerp",
+    "lerp",
+    "linear",
+    "interpolation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/tween-css-transform.git"
+  },
+  "homepage": "https://github.com/mattdesl/tween-css-transform",
+  "bugs": {
+    "url": "https://github.com/mattdesl/tween-css-transform/issues"
+  }
+}
