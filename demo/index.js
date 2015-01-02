@@ -3,12 +3,7 @@ var Tween3D = require('../')
 var css = require('dom-css')
 var Chain = require('tween-chain')
 
-require('canvas-testbed')(render, start)
-
-
-function render() {
-
-}
+require('domready')(start)
 
 function start() {
     var parent = document.body.appendChild(document.createElement('div'))
@@ -23,7 +18,6 @@ function start() {
     })
 
     var child = parent.appendChild(document.createElement('div'))
-
     css(child, {
         background: 'blue',
         width: 100,
@@ -39,7 +33,7 @@ function start() {
             duration: 1,
             delay: 1,
             ease: 'elasticOut',
-            end: 'translateX(20px) translateY(20px) rotateX(40deg) scaleX(0.0)'
+            end: 'translateX(20px) translateY(20px) rotateY(50deg) rotateZ(60deg)'
         }))
         .then(Tween3D(child, {
             duration: 1,
@@ -49,7 +43,7 @@ function start() {
         .then(Tween3D(child, {
             duration: 1,
             ease: 'bounceOut',
-            end: 'rotateX(0deg) translateX(225px) translateY(20px) scaleX(0.5) rotateY(0deg)'
+            end: 'rotateX(0deg) translateX(225px) translateY(20px) scaleX(1.25) scaleY(1.25) rotateY(0deg)'
         }))
 
     tweenr.to(chain)

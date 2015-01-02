@@ -11,10 +11,12 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "domready": "^1.0.7",
     "tween-chain": "^1.0.0"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "build": "browserify demo/index.js | uglifyjs -cm > demo/build/bundle.js"
   },
   "keywords": [
     "tween",
