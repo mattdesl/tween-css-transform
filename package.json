@@ -25,7 +25,6 @@
     "array-range": "^1.0.1",
     "dom-css": "^1.0.4",
     "domready": "^1.0.7",
-    "elle": "^1.1.8",
     "tween-chain": "^1.0.0",
     "tweenr": "^2.1.3"
   },

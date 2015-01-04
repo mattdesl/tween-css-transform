@@ -1,12 +1,12 @@
-var elle = require('elle') //jQuery like DOM utils
 var tweenr = require('tweenr')()
 var Transform = require('../')
 var range = require('array-range')
+var css = require('dom-css')
 
 require('domready')(start)
 
 function start() {
-    elle(document.body).css({
+    css(document.body, {
         transformStyle: 'preserve-3d',
         transform: 'perspective(1000px)',
         margin: 0
@@ -24,7 +24,7 @@ function start() {
             translation: [0, 0, 0]
         }
 
-        tweenr.to(Transform(target[0], {
+        tweenr.to(Transform(target, {
             duration: 1,
             delay: startTime + i*stagger,
             ease: 'quartOut',
@@ -32,7 +32,7 @@ function start() {
             end: ending
         }))
 
-        tweenr.to(Transform(target[0], {
+        tweenr.to(Transform(target, {
             duration: 1,
             delay: startTime + 1.75 + i*stagger,
             ease: 'sineIn',
@@ -57,7 +57,8 @@ function create(parent) {
     count = Math.min(count, 600)
     console.log('total cells', count)
     return range(count).map(function(i) {
-        return elle('<div>').css({
+        var div = document.createElement('div')
+        css(div, {
             position: 'absolute',
             background: '#1d1d1d',
             width: size,
@@ -66,11 +67,12 @@ function create(parent) {
             left: Math.floor(i%cols) * (size+pad),
             top: Math.floor(i/cols) * (size+pad)
         })
+        return div
     })
 }
 
 function appendTo(parent) {
     return function(e) {
-        e.appendTo(parent)
+        parent.appendChild(e)
     }
 }
