@@ -24,6 +24,8 @@ function start() {
             translation: [0, 0, 0]
         }
 
+        //if we specify both start and end values,
+        //there will be no need to read/compute the current DOM state.
         tweenr.to(Transform(target, {
             duration: 1,
             delay: startTime + i*stagger,
