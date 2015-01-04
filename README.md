@@ -55,7 +55,7 @@ Creates a new transform tween with the given options. These include:
 - `end` the ending transform for this tween. Also defaults to the element's computed transformation at the time the tween starts.
 
 The `start` and `end` options can be a CSS string (like `matrix()`, `matrix3d()`, or a series of transform operations), or a 16-float array, or an object of components. If an object is specified, it will look for:
-
+  
 - `translation` the XYZ translation in pixels (default `[0, 0, 0]`) 
 - `scale` in XYZ (default `[1, 1, 1]`) 
 - `rotation` the euler XYZ-order rotation in radians (default `[0, 0, 0]`) 

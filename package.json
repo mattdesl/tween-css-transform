@@ -9,14 +9,27 @@
     "email": "dave.des@gmail.com",
     "url": "https://github.com/mattdesl"
   },
-  "dependencies": {},
+  "dependencies": {
+    "an-array": "^1.0.0",
+    "gl-mat4": "^1.0.1",
+    "mat4-css-parse": "^1.0.0",
+    "mat4-interpolate": "^1.0.3",
+    "mat4-recompose": "^1.0.3",
+    "prefix-style": "^1.0.0",
+    "typedarray-pool": "^1.1.0"
+  },
   "devDependencies": {
+    "array-range": "^1.0.1",
+    "dom-css": "^1.0.4",
     "domready": "^1.0.7",
-    "tween-chain": "^1.0.0"
+    "elle": "^1.1.8",
+    "tween-chain": "^1.0.0",
+    "tweenr": "^2.1.3"
   },
   "scripts": {
     "test": "node test.js",
-    "build": "browserify demo/index.js | uglifyjs -cm > demo/build/bundle.js"
+    "build": "browserify demo/index.js | uglifyjs -cm > demo/build/bundle.js",
+    "build-stress": "browserify demo/stress.js | uglifyjs -cm > demo/build/bundle-stress.js"
   },
   "keywords": [
     "tween",
