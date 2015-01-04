@@ -19,7 +19,7 @@ function start() {
 
     var child = parent.appendChild(document.createElement('div'))
     css(child, {
-        background: 'blue',
+        background: '#1d1d1d',
         width: 100,
         height: 100,
         position: 'absolute',
@@ -38,12 +38,17 @@ function start() {
         .then(Tween3D(child, {
             duration: 1,
             ease: 'expoOut',
-            end: 'rotateX(50deg) rotateY(-250deg) rotateZ(1.3rad)'
+            end: 'rotateX(50deg) rotateY(-250deg) rotateZ(1.3rad) scaleX(0.0)'
         }))
         .then(Tween3D(child, {
             duration: 1,
             ease: 'bounceOut',
             end: 'rotateX(0deg) translateX(225px) translateY(20px) scaleX(1.25) scaleY(1.25) rotateY(0deg)'
+        }))
+        .then(Tween3D(child, {
+            duration: 0.5,
+            ease: 'quartOut',
+            end: { rotation: [0, 0, 1.5], translation: [0, 0, 950], scale: [1, 4, 1] }
         }))
 
     tweenr.to(chain)
