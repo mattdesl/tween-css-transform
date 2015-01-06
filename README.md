@@ -2,8 +2,6 @@
 
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
-### this module is a work in progress.
-
 Tweens a DOM element using CSS `matrix3d()` and 4x4 matrix interpolation (decomposition/recomposition). This allows for a smooth range of 3D rotations (using quaternions and spherical interpolation) without gimbal lock. 
 
 Typically used with [tween-ticker](https://nodei.co/npm/tween-ticker/) or [tweenr](https://nodei.co/npm/tweenr/). Example:
