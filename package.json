@@ -1,6 +1,6 @@
 {
   "name": "tween-css-transform",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "tweens a CSS transform (matrix3d)",
   "main": "index.js",
   "license": "MIT",
