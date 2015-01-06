@@ -40,6 +40,14 @@ var tween3 = Transform(foobar, {
 tweenr.to(tween3)
 ```
 
+## demos
+
+Some demos:
+
+- [3D rotation](http://requirebin.com/?gist=9ee27b3c7b527cbb194e) - [source](demo/index.js)
+- [chained tweens](http://mattdesl.github.io/tween-css-transform/demo/simple.html) - [source](demo/index.js)
+- [stress test](http://mattdesl.github.io/tween-css-transform/demo/stress.html) - [source](demo/stress.js)
+
 ## Usage
 
 [![NPM](https://nodei.co/npm/tween-css-transform.png)](https://nodei.co/npm/tween-css-transform/)

@@ -2,7 +2,11 @@ var tweenr = require('tweenr')()
 var Transform = require('../')
 var css = require('dom-css')
 
+var bgColor = '#383838'
+
 require('domready')(function () {
+    css(document.body, 'background', bgColor)
+    
     //our 3D DOM element...
     var element = create('☯')
     document.body.appendChild(element)
@@ -20,7 +24,7 @@ require('domready')(function () {
     //loop indefinitely
     function loop() {
         return animate(random())
-            .on('complete', loop)
+            .on('complete', loop.bind(null))
     }
 
     //start loop
@@ -51,7 +55,7 @@ function create(text) {
 
     var child = parent.appendChild(document.createElement('div'))
     css(child, {
-        background: '#1d1d1d',
+        background: '#fff',
         width: 100,
         height: 100,
         margin: 'auto',
@@ -61,7 +65,7 @@ function create(text) {
         bottom: 0,
         right: 0,
         borderRadius: '50%',
-        color: 'white',
+        color: bgColor,
         lineHeight: '100px',
         fontSize: 45,
         textAlign: 'center'
